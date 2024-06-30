@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Hire a New Employee</h1>
+    <table border="4">
+        <tr>
+            <th>Name</th>
+            <td><input type="text" id="Name"></td>
+        </tr>
+        <tr>
+            <th>Job Role</th>
+            <td>
+                <select name="role" id="Role" required>
+                    <option value="">-- Job Role --</option>
+                    <option value="intern">Intern</option>
+                    <option value="professional">Professional</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>Department</th>
+            <td>
+                <select name="Department" id="Department" required>
+                    <option value="">-- Department --</option>
+                    <option value="IT services">IT services</option>
+                    <option value="Hr">HR</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>Salary</th>
+            <td>
+                <input type="text" id="Salary" placeholder="Employee Salary" required />
+            </td>
+        </tr>
+        <tr>
+            <th>Work Experience</th>
+            <td>
+                <input type="text" id="Experience" placeholder="Work Experience" required />
+            </td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>
+                <input type="text" id="Email" placeholder="Contact Email" required />
+            </td>
+        </tr>
+        <tr id="btna">
+            <td colspan="2"><input type="button" name="button" id="btn" value="Hire" onclick="AddRow()"></td>
+        </tr>
+    </table>
+
+    <br />
+    <br />
+
+    <table border="4" id="show">
+        <thead id="th">
+            <tr>
+                <th>Employee Name</th>
+                <th>Job Role</th>
+                <th>Department</th>
+                <th>Salary</th>
+                <th>Email</th>
+                <th>Experience</th>
+                <th>Role</th>
+                <th>Fire Employee</th>
+            </tr>
+        </thead>
+        <tbody></tbody> <!-- Add empty tbody for dynamically adding rows -->
+    </table>
+<br />
+<br />
+<br />
+<br />
+    <!-- Display total number of active employees -->
+    <center><div id="font">Total Active Employees: <span id="employeeCount">0</span></div></center>
+
+</body>
+<script src="index.js"></script>
+
+</html>
